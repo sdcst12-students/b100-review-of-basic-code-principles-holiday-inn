@@ -1,3 +1,4 @@
+#!python3
 """
 ### Assignment 1
 #### Calculation of Simple Interest
@@ -13,3 +14,20 @@ Your program should ask the user for
 * The program will calculate the amount of interest earned and display it.
 * Appropriate formatting of the output is a requirement for this assignment
 """
+
+initial = float(input("What is the initial investment?: "))
+ir = float(input("What is the annual interest rate(Percentage)?: "))
+ir=(ir/100)
+time = float(input("How long?: "))
+unit = input("Years, Months, or Days?: ")
+
+if unit == "Months" or "months":
+  time/=12
+  print(f"{initial}*{ir}*{time} = {initial*ir*time}$ earned")
+elif unit == "Years" or "years":
+  print(f"{initial}*{ir}*{z} = {initial*ir*time}$ earned")
+elif unit == "Days" or "days":
+  time/=365
+  print(f"{initial}*{ir}*{z} = {initial*ir*time}$ earned")
+else:
+  print("you did not imput the numbers correctly somehow :(")

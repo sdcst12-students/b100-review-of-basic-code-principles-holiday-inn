@@ -21,4 +21,13 @@ How many months will it take him to pay off the car.  How much interest has he p
 84 months
 He will have paid 21711.60 in interest
 """
-
+debt = float(input("What is the initial debt?: "))
+idebt = debt
+rate = float(input("What is the annual interest rate(decimal)?: "))/1200 + 1
+pay = float(input("what is the annual payment?: "))
+tally = 0
+while debt >= 0: 
+    debt *= rate
+    debt -= pay/12  
+    tally+=1    
+print(f"It took {tally} months during which you payed {round(tally*(pay/12)-idebt+debt,3)}")

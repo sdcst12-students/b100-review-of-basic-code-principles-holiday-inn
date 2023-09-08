@@ -22,3 +22,15 @@ rate: 5%
 10 years
 final balance: 1320.68
 """
+
+invest = float(input("What is the annual investment?: "))
+ir = float(input("What is the annual interest rate(percentage)?: "))
+ir = (ir/100) + 1
+years = int(input("How many years?: "))
+idk=invest
+tally=1
+
+while years>= tally:
+    invest = idk + (invest*ir)
+    tally= tally+1
+print(f"Final amount is {round(invest-idk,2)}")

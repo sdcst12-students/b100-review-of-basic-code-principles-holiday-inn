@@ -22,4 +22,12 @@ rate: 5%
 final balance: 1320.68
 
 """
+invest = float(input("What is the annual investment?: "))
+ir = float(input("What is the annual interest rate(percentage)?: "))
+ir = (ir/100) + 1
+years = int(input("How many years?: "))
+idk= invest
 
+for i in range(years):
+    invest = idk + (invest*ir)
+print(f"You made ${round(invest-idk,2)}")
